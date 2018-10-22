@@ -1,0 +1,8 @@
+<% if @groups.count == 0 %>
+  <p>No Groups found for you</p>
+<% else %>
+  <%= @groups.each do |group| %>
+    <label> <%= group.name %> </label>
+    <label> <%= group.users.count %> </label>
+  <% end %>
+<% end %>
