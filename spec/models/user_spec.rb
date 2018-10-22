@@ -11,7 +11,7 @@ RSpec.describe User, type: :model do
   it { is_expected.to validate_presence_of(:password) }
 
   describe 'signup' do
-    describe 'need to have equal value of password and password_confirmation' do
+    describe 'password_confirmation' do
       subject { user.password_confirmation }
       it { is_expected.to eq(user.password) }
     end
